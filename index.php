@@ -5,7 +5,8 @@
   $app = new \Slim\Slim([
     'templates.path' => 'views',
     ]);
-
+  
+  // GET Routes
   $app->get('/', function() use($app) {
     $Variables = [
         'loggedIn' => 'value'
@@ -31,6 +32,11 @@
 
     }
   });
+  
+  // POST Routes
+  $app->post('/Verify', function() use() {
+    
+  }):
 
   // bootstrap the example
   $app->run();
