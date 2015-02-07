@@ -1,0 +1,14 @@
+{
+    "name": "ionauth/example",
+    "description": "a slim example for ionauth",
+    "require": {
+        "slim/slim": "~2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tjoosten",
+            "email": "Tjoosten3@gmail.com"
+        }
+    ]
+}
