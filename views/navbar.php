@@ -15,16 +15,32 @@
             <li><a href="http://ionauth.github.io/Docs/"><span class="octicon octicon-book"></span> Docs</a></li>
           </ul>
 
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <a role="button" class="btn btn-success" href="#">Register</a>
-          </form>
+          <?php if(! $loggedIn: ?>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Sign in</button>
+              <a role="button" class="btn btn-success" href="#">Register</a>
+            </form>
+          <?php else: ?>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="octicon octicon-person"></span>
+                  Username
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Change account information</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          <?php endif; ?>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
