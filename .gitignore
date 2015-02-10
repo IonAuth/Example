@@ -1,1 +1,4 @@
 /vendor/
+.DS-store
+composer.lock
+composer.phar

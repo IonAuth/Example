@@ -3,7 +3,7 @@
   require 'vendor/autoload.php';
 
   $app = new \Slim\Slim([
-    'templates.path' => 'views',
+    'templates.path' => ' views',
     ]);
   
   // GET Routes
@@ -21,7 +21,8 @@
   $app->get('/Private', function() use($app, $auth) {
     if() {
       $Variables = [
-          'loggedIn' => 'value'
+          'loggedIn' =>
+          'Users'    =>
         ];
 
       $app->render('/header.php');
@@ -29,7 +30,7 @@
       $app->render('/private.php');
       $app->render('/footer.php');
     } else {
-
+      $app->redirect('/');
     }
   });
   
@@ -37,6 +38,10 @@
   $app->post('/Verify', function() use() {
     
   }):
+
+  $app->get('/logout', function() {
+
+  });
 
   // bootstrap the example
   $app->run();
